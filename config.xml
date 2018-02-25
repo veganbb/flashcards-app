@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.2"
+        id        = "com.veganflashcards"
+        version   = "0.1.1">
+		
+
+    <name>Vegan Flashcards</name>
+
+    <description>
+        Learn responses to common questions that you might get as a vegan
+    </description>
+
+    <author href="http://veganflashcards.com" email="info@veganflashcards.com">
+        Bradley Berger
+    </author>
+	<preference name="permissions" value="none" />
+	<preference name="orientation" value="portrait" />
+    <preference name="target-device"   value="universal" />
+    <preference name="fullscreen"      value="false" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="webviewbounce"   value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+    <preference name="prerendered-icon"    value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="stay-in-webview" value="true" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="ios-statusbarstyle"  value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="detect-data-types"   value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend" value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="auto-hide-splash-screen" value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="disable-cursor"  value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="android-installLocation" value="preferExternal" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+ 
+
+
+    <!-- Core plugins -->
+    <!-- <gap:plugin name="org.apache.cordova.contacts" /> -->
+    <!--<gap:plugin name="org.apache.cordova.inappbrowser" /> -->
+    <!--<gap:plugin name="org.apache.cordova.network-information" /> -->
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+
+	<preference name="SplashScreen" value="screen"/>
+
+	<!-- Define app splash screen for each platform. -->
+	<!-- iPhone and iPod touch -->
+	<splash src="splash/480x320.png" platform="ios" width="320" height="480" />
+	<splash src="splash/960x640.png" platform="ios" width="640" height="960" />
+	
+	<!-- iPhone 5 / iPod Touch (5th Generation) -->
+	<splash src="splash/1136x750.png" platform="ios" width="640" height="1136" />
+	
+	<!-- iPhone 6 -->
+	<splash src="splash/1334x750.png" platform="ios" width="750" height="1334" />
+	<splash src="splash/2208x1242.png" platform="ios" width="1242" height="2208" />
+	
+	<!-- iPad -->
+	<splash src="splash/1024x768.png" platform="ios" width="768" height="1024" />
+	
+	<!-- Retina iPad -->
+	<splash src="2048x1536.png" platform="ios" width="1536" height="2048" />
+	
+	<splash src="splash/320x200.png" platform="android" qualifier="ldpi" />
+	<splash src="splash/480x320.png" platform="android" qualifier="mdpi" />
+	<splash src="splash/800x480.png" platform="android" qualifier="hdpi" />
+	<splash src="splash/1280x720.png" platform="android" qualifier="xhdpi" />
+	<splash src="splash/1600x960.png" platform="android" qualifier="port-xxhdpi" />
+	<splash src="splash/1920x1280.png" platform="android" qualifier="port-xxxhdpi" />
+	
+	<gap:splash src="splash/1920x1280.png" />
+
+	<!-- third party plugins -->
+	<!-- <plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" /> -->
+	<!-- <gap:plugin name="com.adobe.plugins.gaplugin" /> -->
+	<plugin name="cordova-plugin-google-analytics" source="npm" />
+	
+
+ 
+    <icon src="includes/images/icon.png" />
+	<icon src="includes/images/icon-57.png" width="57" height="57" />
+	<icon src="includes/images/icon-72.png" width="72" height="72" />
+	<icon src="includes/images/icon-114.png" width="114" height="114" />
+	<icon src="includes/images/icon-120.png" width="120" height="120" />
+	<icon src="includes/images/icon-144.png" width="144" height="144" />
+	<icon src="includes/images/76square.png" width="76" height="76" />
+	<icon src="includes/images/120square.png" width="120" height="120" />
+	<icon src="includes/images/152square.png" width="152" height="152" />
+    <icon src="includes/images/icon-64.png"          gap:platform="webos" />
+    <icon src="includes/images/icon-48.png"  gap:platform="winphone" />
+    <icon src="includes/images/icon-173.png" gap:platform="winphone"   gap:role="background" />
+
+
+    <access origin="*"/>
+    <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
+    <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+</widget>

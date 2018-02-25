@@ -1,0 +1,65 @@
+$dark:#776e65;
+$light:#f9f6f2;
+$accent1-1:#edcf72;
+$accent1-2:#eee4da;
+$accent2-2:#bbada0;
+$accent2-1:#6fb425;
+$accent3-1:#34abde;
+$accent3-2:#f59563;
+
+$info:#5bc0de;
+$success:#5cb85c;
+
+@import "mixins.scss";
+/*********************************
+*********** SITEWIDE *************
+*********************************/
+
+*, *:before, *:after{
+	box-sizing:border-box;
+}
+html{
+	overflow:hidden;
+}
+body{
+	margin:0;
+	padding:0;
+	color:$dark;
+	@include font();
+	position:relative;
+	height:100vh;
+}
+.clearfix{
+	clear:both;
+}
+.clearfix:before, .clearfix:after{
+	display:table;
+	content:" ";
+	clear:both;
+}
+
+.hidden{
+	display:none;
+}
+
+.btn{
+	padding:.75em;
+	text-align:center;
+	border-radius:.25em;
+	background:red;
+	color:white;
+	text-transform:uppercase;
+	margin-bottom:1em;
+	letter-spacing:.15em;
+}
+
+.capitalize{
+	text-transform:capitalize;
+}
+
+@import "font-awesome.scss";
+@import "startScreen.scss";
+@import "flashcards.scss";
+@import "all-subjects.scss";
+@import "search.scss";
+@import "references.scss";

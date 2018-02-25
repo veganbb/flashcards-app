@@ -1,0 +1,217 @@
+.flashcards{
+	height:100vh;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+	background:white;
+	border-bottom:1vh solid black;
+	
+	.back{
+		height: 8vh;
+		font-size: 4vh;
+		padding-left: 5vh;
+		line-height: 8vh;
+		text-transform: uppercase;
+
+		&:before{
+			float:left;
+			content:"\2039";
+			font-size:2em;
+			position:absolute;
+			top:-0.1em;
+			left: 1vh;
+			@include font(thin);
+		}
+	}
+	
+	@include mainbuttons(3)
+}
+
+
+.flashcards-game{
+	height:100vh;
+	width:100vw;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;
+	background:white;
+	border-bottom:1vh solid black;
+	
+	.back{
+		height: 8vh;
+		font-size: 4vh;
+		padding-left: 5vh;
+		line-height: 8vh;
+		text-transform: uppercase;
+		border-bottom:1px solid;
+
+		&:before{
+			float:left;
+			content:"\2039";
+			font-size:2em;
+			position:absolute;
+			top:-0.1em;
+			left: 1vh;
+			@include font(thin);
+		}
+	}
+	.flip-over {
+		height: 8vh;
+		line-height: 8vh;
+		font-size:5vh;
+		text-align:center;
+		text-transform:uppercase;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+	}
+	.card-front{
+		display:table;
+	}
+	.card-front-content{
+		display:table-cell;
+		vertical-align:middle;
+		font-size: 6vh;
+		text-align: center;
+	    word-break: break-word;
+		
+		& > span{
+			display:block;
+			overflow-x:auto;
+			overflow-y:auto;
+			max-height:84vh;
+			position:relative;
+			top:-4vh;
+			padding:0 2vw;
+		
+		}
+	}
+	.back-side-content {
+		padding: 3vw 5vw;
+		max-height: 72vh;
+		overflow-y: auto;
+
+		h2 {
+			font-size: 6vw;
+		}
+		p {
+			font-size: 4.5vw;
+		}
+	}
+	.back-side-footer {
+		position: absolute;
+		bottom: 0;
+		width:100%;
+	}
+	.back-side-footer-top {
+		text-transform: uppercase;
+		font-size: 7vw;
+		height: 9vh;
+		text-align: center;
+		line-height: 9vh;
+		border-top:1px solid;
+	}
+	.back-side-footer-bottom p {
+		margin: 0;
+		height: 11vh;
+		line-height: 10vh;
+		font-size: 8vw;
+		float: left;
+		width: 50%;
+		text-align: center;
+		text-transform: uppercase;
+		border-top: 1px solid;
+		
+		&:nth-of-type(1){
+			border-right:1px solid;
+		}
+	}
+
+
+
+
+	/*
+	// FLASHCARD FLIP CODE - ORIGINALLY FROM: https://davidwalsh.name/css-flip
+	.flip-container {
+		perspective: 1000px;
+	}
+	.flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+	.flip-container, .card-front, .card-back {
+		width: 100vw;
+		height: 92vh;
+	}
+	.flipper {
+		transition: 0.6s;
+		transform-style: preserve-3d;
+		position: relative;
+		display: table;
+		width: 100%;
+	}
+	.card-front, .card-back {
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.card-front {
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
+	.card-back {
+		transform: rotateY(180deg);
+	}
+	*/
+	// FLASHCARD FLIP CODE - ORIGINALLY FROM: https://davidwalsh.name/css-flip
+	.flip-container {
+		perspective: 1000px;
+		
+		.card-back{
+			visibility:hidden;
+		}
+	}
+	.flip-container.hover .flipper {
+		transform: rotateY(180deg);
+		
+		.card-front{
+			visibility:hidden;
+		}
+		.card-back{
+			visibility:visible;
+		}
+	}
+	.flip-container, .card-front, .card-back {
+		width: 100vw;
+		height: 92vh;
+	}
+	.flipper {
+		transition: 0.6s;
+		transform-style: preserve-3d;
+		position: relative;
+		display: table;
+		width: 100%;
+	}
+	.card-front, .card-back {
+		//backface-visibility: hidden;
+		//-webkit-backface-visibility: hidden;
+		transition:visibility 0s linear 0.2s;
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility:visible;
+	}
+	.card-front {
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
+	.card-back {
+		transform: rotateY(180deg);
+	}
+
+}
+

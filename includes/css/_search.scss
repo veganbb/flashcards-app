@@ -1,0 +1,114 @@
+.search-results{
+	height:92vh;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background:white;
+	width:100%;
+	
+	.back{
+		height: 5vh;
+		font-size: 3vh;
+		padding-left: 4vh;
+		line-height: 5vh;
+		text-transform: uppercase;
+
+		&:before{
+			float:left;
+			content:"\2039";
+			font-size:2em;
+			position:absolute;
+			top:-0.1em;
+			left: 1vh;
+			@include font(thin);
+		}
+	}
+	
+	ul{
+		list-style-type:none;
+		padding:0;
+		margin:0;
+		font-size:5vw;
+		width:100%;
+		@include headertext();
+		text-transform:none;
+		letter-spacing:0;
+		
+		li{
+			padding:1.5vh 5vw 1.5vh 3vw;
+			line-height:135%;
+			display:table;
+			width:100%;
+			border-top:1px solid;
+			
+			div{
+				display:table-cell;
+				line-height:135%;
+				vertical-align:middle;
+				
+				span{
+					font-size:.7em;
+					display:block;
+				}
+			}
+			
+			&:after{
+				float:right;
+				content:"\203A";
+				font-size:2em;
+				position:relative;
+				top:5vh;
+				left:2vw;
+				@include font(thin);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.search-results-details{
+	height:92vh;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:3;
+	background:white;
+	width:100%;
+	
+	.back{
+		height: 5vh;
+		font-size: 3vh;
+		padding-left: 4vh;
+		line-height: 5vh;
+		text-transform: uppercase;
+		border-bottom:1px solid;
+
+		&:before{
+			float:left;
+			content:"\2039";
+			font-size:2em;
+			position:absolute;
+			top:-0.1em;
+			left: 1vh;
+			@include font(thin);
+		}
+	}
+	
+	.search-results-details-content{
+		padding: 3vw 5vw;
+
+		h2 {
+			font-size: 6vw;
+		}
+		p {
+			font-size: 4.5vw;
+		}
+	}
+
+}

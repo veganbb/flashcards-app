@@ -1,0 +1,21 @@
+.start-screen{
+	display:block;
+	position:relative;
+	height:100vh;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	
+	#search{
+		margin:1.5vh;
+		height:5vh;
+		width:calc(100% - 3vh);
+		border-radius:1000px;
+		text-align:center;
+		font-size:3vh;
+		border:1px solid;
+		outline:none;
+	}
+	@include mainbuttons(5)
+}

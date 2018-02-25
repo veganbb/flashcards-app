@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vegan Flashcard App</title>
+<link rel="stylesheet" href="includes/build/styles.css"/>
+<script src="phonegap.js"></script>
+<script src="includes/build/scripts.js"></script>
+</head>
+
+<body>
+
+<div class="start-screen">
+	<input type="text" placeholder="Search" id="search">
+	<ul class="options">
+    	<li class="option" data-option="flashcards"><div>flashcards</div></li>
+    	<li class="option" data-option="all"><div>view all subjects</div></li>
+        <li class="option" data-option="quick"><div>quick facts / demo</div></li>
+        <li class="option" data-option="additional"><div>additional references</div></li>
+        <li class="option" data-option="submit-new"><a href="http://www.veganflashcards.com?help">contribute new questions</a></li>
+    </ul>
+</div>
+
+<div class="flashcards hidden">
+	<div class="back">back</div>
+	<ul class="flashcard-options">
+    	<li class="flashcard-option" data-option="all-cards"><div>view all cards</div></li>
+    	<li class="flashcard-option" data-option="unknown"><div>only view unknown<span class="unknown-count"></span></div></li>
+    	<li class="flashcard-option" data-option="known"><div>only view known<span class="known-count"></span></div></li>
+    </ul>
+</div>
+<div class="flashcards-game hidden">
+	<div class="back">back</div>
+    <div class="flip-container">
+        <div class="flipper">
+            <div class="card-front">
+            	<div class="card-front-content"><span><span></span></span></div>
+                <div class="flip-over">flip &nbsp;&nbsp;<i class="fa fa-repeat" aria-hidden="true"></i></div>
+            </div>
+            <div class="card-back">
+                <div class="back-side-content"></div>
+                <div class="back-side-footer">
+                    <div class="back-side-footer-top">did you know this?</div>
+                    <div class="back-side-footer-bottom">
+                        <p data-known="1"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;yes</p>
+                        <p data-known="0"><i class="fa fa-times" aria-hidden="true"></i> &nbsp;no</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="all hidden">
+	<div class="back">back</div>
+    <div class="all-content"></div>
+</div>
+<div class="all-details hidden">
+	<div class="back">back</div>
+    <div class="all-details-content"></div>
+</div>
+
+
+<div class="search-results hidden">
+	<div class="back">back</div>
+	<div class="search-results-content"></div>
+</div>
+<div class="search-results-details hidden">
+	<div class="back">back</div>
+	<div class="search-results-details-content"></div>
+</div>
+
+<div class="quick hidden">
+    <div class="back">back</div>
+    <div class="additional-content">
+        <div class="expandable">
+            <div class="expandable-title">Kill Counter</div>
+            <div class="expandable-content capitalize">
+                <div class="reset-kill-count btn">Start</div>
+                <span id="count0">0</span>&nbsp; marine animals<br />
+                <span id="count1">0</span>&nbsp; chickens<br />
+                <span id="count2">0</span>&nbsp; ducks<br />
+                <span id="count3">0</span>&nbsp; pigs<br />
+                <span id="count4">0</span>&nbsp; rabbits<br />
+                <span id="count5">0</span>&nbsp; turkeys<br />
+                <span id="count6">0</span>&nbsp; geese<br />
+                <span id="count7">0</span>&nbsp; sheep<br />
+                <span id="count8">0</span>&nbsp; goats<br />
+                <span id="count9">0</span>&nbsp; cows and calves<br />
+                <span id="count10">0</span>&nbsp; rodents<br />
+                <span id="count11">0</span>&nbsp; pigeons and other birds<br />
+                <span id="count12">0</span>&nbsp; buffaloes<br />
+                <span id="count13">0</span>&nbsp; dogs<br />
+                <span id="count14">0</span>&nbsp; cats<br />
+                <span id="count15">0</span>&nbsp; horses<br />
+                <span id="count16">0</span>&nbsp; donkeys and mules<br />
+                <span id="count17">0</span>&nbsp; camels and other camelids
+            </div>
+        </div>
+        <div class="expandable">
+            <div class="expandable-title">Calcium</div>
+            <div class="expandable-content">
+                <p>Do you think they made this aisle for vegans, or for the average American who eats an average of 2lbs of dairy daily?</p>
+                <img src="/includes/images/questions/calcium.jpg" />
+            </div>
+        </div>
+        <div class="expandable">
+            <div class="expandable-title">Cage Free</div>
+            <div class="expandable-content">
+                <img src="/includes/images/questions/cage-free.jpg" />
+            </div>
+        </div>
+        <div class="expandable">
+            <div class="expandable-title">Teeth Comparison</div>
+            <div class="expandable-content">
+                <img src="/includes/images/questions/teeth.jpg" />
+            </div>
+        </div>
+        <div class="expandable">
+            <div class="expandable-title">Vegans Athletes</div>
+            <div class="expandable-content">
+                <div class="padd-bottom">
+                    <img src="/includes/images/questions/patrik-baboumian.jpg" />
+                    <p><strong>Patrik Baboumian</strong> - holds multiple world records in weight lifting, namely:</p>
+                    <ul>
+                        <li>Log Lift: When weighing 105kg, Patrik broke the world record lifting 165kg</li>
+                        <li>Fronthold: Held a 20kg weight with arms straight in-front for 86 seconds, beating the previous record by 10 seconds</li>
+                        <li>Yoke Walk: Carried 555kg a distance of 10 meters in 28 seconds</li>
+                        <li>Beer Keg: Lifted 150.2kg overhead</li>
+                    </ul>
+                </div>
+                <div class="padd-bottom">
+                    <img src="/includes/images/questions/kendrick-farris.jpg" />
+                    <p><strong>Kendrick Farris</strong> - was the only strongman sent to the 2016 Olympics for the USA, during which he broke the U.S record by lifting a total of 831 pounds (377 kg) -- 370 pounds (168 kg) in the snatch and 461 pounds (209 kg) in the clean and jerk</p>
+                </div>
+                <div class="padd-bottom">
+                    <img src="/includes/images/questions/scott-jurek.jpg" />
+                    <p><strong>Scott Jurek</strong> - is an ultramarathon runner (ultramarathons start at distances of 26 miles), some notable accomplishments include:</p>
+                    <ul>
+                        <li>winning Millwok 100k three times</li>
+                        <li>holding the the record for the 2189 mile Appalachian Trail</li>
+                        <li>setting the American 24 hour record with a run of 165.7 miles</li>
+                        <li>setting ten ultramarathon course records</li>
+                        <li>becoming the first American winner of the Spartathon (246k)</li>
+                    </ul>
+                </div>
+                <div class="padd-bottom">
+                    <img src="/includes/images/questions/carl-lewis.jpg" />
+                    <p><strong>Carl Lewis</strong> - won 9 olympic medals and set world records in the 100 m, 4 x 100 m and 4 x 200 m relays</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="additional hidden">
+	<div class="back">back</div>
+    <div class="additional-content">
+        <h2>Videos on Youtube</h2>
+        <p><a href="https://youtu.be/es6U00LMmC4?t=1m48s">Best Speech You Will Ever Hear - Gary Yourofsky</a></p>
+        <p><a href="https://www.youtube.com/watch?v=ibyI1M3SftY">Best Speech You Will Ever Hear #2 - Go Vegan !</a></p>
+        <p><a href="https://www.youtube.com/watch?v=30gEiweaAVQ">Uprooting the Leading Causes of Death</p>
+        <p><a href="https://www.youtube.com/watch?v=opj0_3L1l88">Earthlings Documentary</a></p>
+        <p><a href="https://www.youtube.com/user/BiteSizeVegan">Bite Size Vegan</a></p>
+    	<h2>Videos on Netflix</h2>
+        <p><a href="https://www.netflix.com/title/80033772">Forks Over Knives</a></p>
+        <p><a href="https://www.netflix.com/title/70185045">Cowspiracy</a></p>
+        <p><a href="https://www.netflix.com/title/70173634">Fat, Sick &amp; Nearly Dead</a></p>
+        <p><a href="https://www.netflix.com/title/70245084">Vegucated</a></p>
+        <p><a href="https://www.netflix.com/title/70123196">Food Matters</a></p>
+        <p><a href="https://www.netflix.com/title/80113787">Live and Let Live</a></p>
+        <p><a href="https://www.netflix.com/title/80068073">PlantPure Nation</a></p>
+        <h2>Medical Research</h2>
+        <p>The NIH website is where tons of medical research is published, you can use their search tool to find information: <a href="https://search.nih.gov/search?affiliate=nih">search.nih.gov/search?affiliate=nih</a>. You might want to start by searching for <a href="https://search.nih.gov/search?utf8=%E2%9C%93&affiliate=nih&query=vegan+diabetes">Vegan Diabetes</a>, or <a href="https://search.nih.gov/search?utf8=%E2%9C%93&affiliate=nih&query=vegan+cancer&commit=Search">Vegan Cancer</a></p>
+        <p><a href="https://smile.amazon.com/How-Not-Die-Discover-Scientifically/dp/1250066115">How Not To Die</a></p>
+        <!--<p><a href="http://eatingpigskillskids.com">EatingPigsKillsKids.com</a> is a website that was made in response to the "Pigs for the kids" event. It summarises a few of the articles on the NIH website</p>-->
+        <p><a href="http://nutritionfacts.org/">nutritionfacts.org</a></p>
+        <h2>Other Websites</h2>
+        <p><a href="http://www.peta.org/">peta.org</a></p>
+        <p><a href="http://vegankit.com/">vegankit.com</a></p>
+        <p><a href="http://www.vegan.com/">vegan.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
