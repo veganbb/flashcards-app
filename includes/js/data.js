@@ -17,7 +17,7 @@ Here are some possible responses that you might want to provide. Again, remember
 1) Because it's the right thing to do. It helps the animals, it helps the environment, and it helps us.<br />\
 2) I don't want to have animal abuse as part of my lifestyle in a society where it's still considered normal\
 3) We all say that we love animals and we are against animal cruelty, but we all pay people to mutilate, torture and slaughter animals. It’s not for any necessity, it’s not because we need it for our health or survival aspect, but because of  commodity, culture and lack of education and lastly, because of taste. – James Aspey<br /><br />\
-<!-- <img src='/includes/images/questions/1.jpg' /><br /><br /> -->\
+<!-- <img src='includes/images/questions/1.jpg' /><br /><br /> -->\
 <a href='https://www.youtube.com/watch?v=923eVlu6IgU'>https://www.youtube.com/watch?v=923eVlu6IgU</a>";
 category[1]="basics";
 
@@ -73,7 +73,7 @@ answer[11]="In some cultural traditions it's perfectly acceptable to control wom
 category[11]="ethics";
 
 question[12]="I only buy free range, grass fed, ethically produced meat/ dairy/ eggs";
-answer[12]="It's all the same. \"Free Range\" just means that instead of putting 5 chickens in a cage the size of a milk crate, they put thousands in a single room. The \"Organic\" label only has to do with our own health, it means that the cow wasn't given antibiotics and when they get sick from the horrendous conditions they're placed in, they aren't allowed to get antibiotics as medicine <img src='/includes/images/questions/12.jpg' style='width:100%' />";
+answer[12]="It's all the same. \"Free Range\" just means that instead of putting 5 chickens in a cage the size of a milk crate, they put thousands in a single room. The \"Organic\" label only has to do with our own health, it means that the cow wasn't given antibiotics and when they get sick from the horrendous conditions they're placed in, they aren't allowed to get antibiotics as medicine <img src='includes/images/questions/12.jpg' style='width:100%' />";
 category[12]="ethics";
 
 question[13]="What about plants, they're alive too!";
@@ -176,7 +176,7 @@ category[31]="health";
 
 question[32]="Obesity runs in my family";
 answer[32]="The only thing that runs in your family is the diet that was passed down. As a population, vegans are the only group who are within a healthy BMI, and begin vegan is obviously not hereditary.<br /><br />\
-			<img style='width:100%;' src='/includes/images/questions/32.jpg' />";
+			<img style='width:100%;' src='includes/images/questions/32.jpg' />";
 category[32]="health";
 
 /*
